@@ -10,32 +10,34 @@
  Map en Filter worden veel gebruikt, lees zelf hoe map, filter en reduce werken.
  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
+
+
  */
 
+
 // Corrigeer 1.
-var add () => 1 + 1;
-console.log(add());
+let add = () => 1 + 1;
+console.log("Opdracht 1: ", add());
 
 // Corrigeer 2.
-var divide = num1, num2 => num1 / num2;
-console.log(divide(7, 2))
+let divide = (num1, num2) => num1 / num2;
+console.log("Opdracht 2: ", divide(7, 2));
 
 // Corrigeer 3.
-var square = (width, length) => {
+let square = (width, length) => {
     const double = 2;
-    let width = width * double;
-    let length = length * double;
-    width * length;
-
+    width = width * double;
+    length = length * double;
+    return width * length;
 }
-console.log(square(10, 15));
-
+ console.log("Opdracht 3: ", square(10, 15));
+//
 // Corrigeer 4.
-var counting = {4, 2, 14}.map((x) => {
-    var add = x + 1;
+let counting = [4, 2, 14].map((x) => {
+    const add = x + 1;
     return x * add;
 });
-console.log(counting);
+console.log("Opdracht 4: ", counting);
 
 
 /*
@@ -53,31 +55,31 @@ const score = [
 ];
 
 // Herschrijf 1.
-const oneven = numbers.filter(function (number) {
+const oneven = numbers.filter((number) => {
     return number % 2;
 });
-console.log(oneven);
+console.log("Opdracht 5: ",oneven);
 
 // Herschrijf 2.
-const sum = numbers.reduce(function(first, second) {
+const sum = numbers.reduce((first, second) => {
     return first + second;
-}, 0);
-console.log(sum);
+});
+console.log("Opdracht 6: ",sum);
 
 // Herschrijf 3.
-const total = score.reduce(function(first, second) {
+const total = score.reduce((first, second) => {
     return first + second.grade;
 }, 0);
-console.log(total);
+console.log("Opdracht 7: ", total);
 
 // Herschrijf 4.
-const range = numbers.filter(function(number) {
+const range = numbers.filter((number) => {
     return number > 5 && number < 30;
 });
-console.log(range);
+console.log("Opdracht 8: ",range);
 
 // Herschrijf 5.
-const double = numbers.map(function(number) {
+const double = numbers.map((number) => {
     return number * 2;
 });
-console.log(double);
+console.log("Opdracht 9: ", double);
